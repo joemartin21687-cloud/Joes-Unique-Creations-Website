@@ -33,3 +33,13 @@ Quote submissions are sent to joesuniquecreations19038@gmail.com using FormSubmi
 - Adds a prominent Dropbox “UPLOAD LARGE ARTWORK” button for larger customer artwork.
 - Large files upload to the Customer Artwork Uploads Dropbox folder.
 - Reminds customers to include their name or business name in the filename.
+
+## V6 Local SEO Upgrade
+- Adds a stronger Glenside-focused page title and meta description.
+- Adds a canonical URL and social-sharing metadata.
+- Adds LocalBusiness structured data with business phone, email, address, services and nearby service areas.
+- Strengthens visible local-service wording for Glenside and nearby Montgomery County communities.
+- Improves image alt text for service and location relevance.
+- Adds clickable business email and website information.
+- Keeps the working FormSubmit quote form and Dropbox large-artwork workflow unchanged.
+- Updates sitemap metadata while keeping https://www.joesuc.com/ as the canonical website.
