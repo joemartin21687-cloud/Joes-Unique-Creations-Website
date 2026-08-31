@@ -19,3 +19,10 @@ This is a standalone static website project designed so the business owner can c
 
 ## V3 Quote Form
 Quote submissions are sent to joesuniquecreations19038@gmail.com using FormSubmit. The first live submission requires one-time email confirmation.
+
+## V4 Fixes
+- Blocks files over 10 MB before FormSubmit submission.
+- Shows selected file name and size.
+- Adds a Remove File button.
+- Redirects successful submissions to a branded thank-you page.
+- Keeps the sticky navigation at the top and adds safer anchor spacing.

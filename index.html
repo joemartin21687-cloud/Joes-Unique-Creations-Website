@@ -198,6 +198,7 @@
 
           <input type="hidden" name="_subject" value="NEW WEBSITE QUOTE REQUEST - Joe's Unique Creations">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://joemartin21687-cloud.github.io/Joes-Unique-Creations-Website/thank-you.html">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="form-grid">
@@ -289,17 +290,27 @@
               placeholder="Tell us what you want printed, colors, names/numbers, special instructions, or anything else we should know."></textarea>
           </label>
 
-          <label>
-            Upload Artwork / Logo / Photo
-            <input type="file" name="attachment"
-              accept=".png,.jpg,.jpeg,.pdf,.svg,.webp">
-          </label>
+          <div class="upload-block">
+            <label for="artworkFile">
+              Upload Artwork / Logo / Photo
+              <input id="artworkFile" type="file" name="attachment"
+                accept=".png,.jpg,.jpeg,.pdf,.svg,.webp">
+            </label>
 
-          <div class="form-note">
-            You may upload artwork, a logo or reference photo. Maximum total upload size is 10 MB.
+            <div id="fileStatus" class="file-status" aria-live="polite">
+              No file selected. Maximum file size: 10 MB.
+            </div>
+
+            <div class="upload-actions">
+              <button type="button" id="removeFileBtn" class="btn small secondary-btn" hidden>Remove File</button>
+            </div>
           </div>
 
-          <button type="submit" class="btn primary">Submit Quote Request</button>
+          <div class="form-note">
+            Accepted: PNG, JPG, JPEG, PDF, SVG or WEBP. Files over 10 MB will be blocked before submission so you won't lose the rest of your form.
+          </div>
+
+          <button id="quoteSubmitBtn" type="submit" class="btn primary">Submit Quote Request</button>
           <p class="form-help">After you submit, Joe's Unique Creations will receive your request by email.</p>
         </form>
       </div>
