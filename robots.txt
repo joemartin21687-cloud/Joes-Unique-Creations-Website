@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.joesuc.com/sitemap.xml
+Sitemap: https://joesuniquecreationspa.com/sitemap.xml
