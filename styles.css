@@ -349,3 +349,12 @@ section{
     padding:34px 22px;
   }
 }
+
+
+/* V5 Dropbox large-file upload option */
+.large-upload-box{margin:0 0 22px;padding:20px;border:2px solid var(--red);border-radius:14px;background:#fff7f7;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.large-upload-box strong{font-size:1.08rem;color:#111}
+.large-upload-box p{margin:3px 0 0;color:#555}
+.large-upload-box small{color:#555;font-weight:700}
+.large-upload-btn{background:var(--black);color:#fff;border:2px solid var(--red);font-size:1rem}
+.large-upload-btn:hover{background:var(--red)}

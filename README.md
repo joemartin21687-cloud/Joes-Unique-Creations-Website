@@ -26,3 +26,10 @@ Quote submissions are sent to joesuniquecreations19038@gmail.com using FormSubmi
 - Adds a Remove File button.
 - Redirects successful submissions to a branded thank-you page.
 - Keeps the sticky navigation at the top and adds safer anchor spacing.
+
+
+## V5 Large Artwork Upload
+- Keeps the FormSubmit attachment option for files up to 10 MB.
+- Adds a prominent Dropbox “UPLOAD LARGE ARTWORK” button for larger customer artwork.
+- Large files upload to the Customer Artwork Uploads Dropbox folder.
+- Reminds customers to include their name or business name in the filename.
