@@ -188,28 +188,40 @@
         <div class="section-heading">
           <p class="eyebrow">REQUEST A QUOTE</p>
           <h2>Tell us what you need.</h2>
-          <p>Fill this out and the site will prepare the details for you to send. We can connect a full online submission system and artwork uploads once your hosting account is set up.</p>
+          <p>Send us the details of your project and upload your artwork or logo. Your request will be emailed directly to Joe's Unique Creations.</p>
         </div>
 
-        <form id="quoteForm" class="quote-form">
+        <form id="quoteForm" class="quote-form"
+          action="https://formsubmit.co/joesuniquecreations19038@gmail.com"
+          method="POST"
+          enctype="multipart/form-data">
+
+          <input type="hidden" name="_subject" value="NEW WEBSITE QUOTE REQUEST - Joe's Unique Creations">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
           <div class="form-grid">
             <label>
-              Name
-              <input type="text" id="name" required>
+              Customer Name *
+              <input type="text" name="Customer Name" required>
             </label>
+
             <label>
-              Phone
-              <input type="tel" id="phone" required>
+              Phone Number *
+              <input type="tel" name="Phone Number" required>
             </label>
+
             <label>
-              Email
-              <input type="email" id="email">
+              Email Address *
+              <input type="email" name="email" required>
             </label>
+
             <label>
-              Product
-              <select id="product">
+              Product *
+              <select name="Product" required>
+                <option value="">Choose a product</option>
                 <option>T-Shirts</option>
-                <option>Hoodies</option>
+                <option>Hoodies / Sweatshirts</option>
                 <option>DTF Transfers Only</option>
                 <option>Hats</option>
                 <option>Tumblers / Mugs</option>
@@ -217,27 +229,78 @@
                 <option>Other</option>
               </select>
             </label>
+
             <label>
-              Quantity
-              <input type="number" id="quantity" min="1" value="12">
+              Total Quantity *
+              <input type="number" name="Total Quantity" min="1" value="12" required>
             </label>
+
             <label>
               Needed By
-              <input type="date" id="needBy">
+              <input type="date" name="Needed By">
             </label>
+
+            <label>
+              Shirt / Product Color
+              <input type="text" name="Color" placeholder="Example: Black, White, Royal Blue">
+            </label>
+
+            <label>
+              Rush / Same-Day Needed?
+              <select name="Rush Order">
+                <option>No</option>
+                <option>Yes - Same Day</option>
+                <option>Yes - Rush Order</option>
+                <option>Not Sure</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="quote-subsection">
+            <h3>Sizes & Quantities</h3>
+            <p>Enter how many you need of each size. Leave blank if it does not apply.</p>
+            <div class="size-grid">
+              <label>XS<input type="number" name="Size XS" min="0"></label>
+              <label>S<input type="number" name="Size S" min="0"></label>
+              <label>M<input type="number" name="Size M" min="0"></label>
+              <label>L<input type="number" name="Size L" min="0"></label>
+              <label>XL<input type="number" name="Size XL" min="0"></label>
+              <label>2XL<input type="number" name="Size 2XL" min="0"></label>
+              <label>3XL<input type="number" name="Size 3XL" min="0"></label>
+              <label>4XL<input type="number" name="Size 4XL" min="0"></label>
+              <label>Youth<input type="number" name="Youth Sizes Qty" min="0"></label>
+            </div>
+          </div>
+
+          <div class="quote-subsection">
+            <h3>Print Locations</h3>
+            <div class="option-grid">
+              <label class="check-option"><input type="checkbox" name="Print Location" value="Front Left Chest"> Front Left Chest</label>
+              <label class="check-option"><input type="checkbox" name="Print Location" value="Full Front"> Full Front</label>
+              <label class="check-option"><input type="checkbox" name="Print Location" value="Full Back"> Full Back</label>
+              <label class="check-option"><input type="checkbox" name="Print Location" value="Sleeve"> Sleeve</label>
+              <label class="check-option"><input type="checkbox" name="Print Location" value="Other"> Other</label>
+            </div>
           </div>
 
           <label>
-            Tell us about the order
-            <textarea id="details" rows="6" placeholder="Shirt colors, sizes, front/back printing, artwork idea, etc."></textarea>
+            Tell Us About Your Order
+            <textarea name="Order Details" rows="6"
+              placeholder="Tell us what you want printed, colors, names/numbers, special instructions, or anything else we should know."></textarea>
+          </label>
+
+          <label>
+            Upload Artwork / Logo / Photo
+            <input type="file" name="attachment"
+              accept=".png,.jpg,.jpeg,.pdf,.svg,.webp">
           </label>
 
           <div class="form-note">
-            Artwork upload will be connected in the hosted version.
+            You may upload artwork, a logo or reference photo. Maximum total upload size is 10 MB.
           </div>
 
-          <button type="submit" class="btn primary">Prepare Quote Request</button>
-          <p id="formMessage" class="form-message" aria-live="polite"></p>
+          <button type="submit" class="btn primary">Submit Quote Request</button>
+          <p class="form-help">After you submit, Joe's Unique Creations will receive your request by email.</p>
         </form>
       </div>
     </section>

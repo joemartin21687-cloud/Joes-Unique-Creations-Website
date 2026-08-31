@@ -15,3 +15,7 @@ This is a standalone static website project designed so the business owner can c
 3. Decide whether the quote form should use email, Formspree, Jotform, or a custom backend.
 4. Add final domain/hosting configuration.
 5. Verify all promotion terms before publishing.
+
+
+## V3 Quote Form
+Quote submissions are sent to joesuniquecreations19038@gmail.com using FormSubmit. The first live submission requires one-time email confirmation.

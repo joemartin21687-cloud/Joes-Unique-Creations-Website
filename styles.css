@@ -180,3 +180,59 @@ footer{background:#090909;color:white;padding:40px 0 22px}
 .shop-photo-box>img{width:100%;height:250px;object-fit:cover;display:block}
 .shop-info{padding:26px 30px 30px}
 @media(max-width:560px){.gallery-photo.wide{grid-column:span 1}.hero-logo{width:100%}}
+
+
+.quote-subsection{
+  margin:12px 0 22px;
+  padding:20px;
+  background:#f8f8f8;
+  border:1px solid #e7e7e7;
+  border-radius:14px;
+}
+.quote-subsection h3{margin:0 0 4px}
+.quote-subsection p{margin:0 0 16px;color:#666;font-size:.92rem}
+.size-grid{
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  gap:10px;
+}
+.size-grid label{
+  margin:0;
+  text-align:center;
+  font-size:.85rem;
+}
+.size-grid input{
+  padding:10px 6px;
+  text-align:center;
+}
+.option-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.check-option{
+  flex-direction:row;
+  align-items:center;
+  gap:9px;
+  margin:0;
+  background:white;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:11px 12px;
+}
+.check-option input{
+  width:auto;
+  margin:0;
+}
+.form-help{
+  margin:12px 0 0;
+  color:#666;
+  font-size:.9rem;
+}
+@media(max-width:850px){
+  .size-grid{grid-template-columns:repeat(3,1fr)}
+  .option-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .option-grid{grid-template-columns:1fr}
+}
