@@ -169,3 +169,14 @@ footer{background:#090909;color:white;padding:40px 0 22px}
   .coupon-inner strong{font-size:2.1rem}
   .coupon-price{font-size:3.8rem}
 }
+
+.hero-logo{width:min(430px,82%);max-height:165px;object-fit:cover;object-position:center;border-radius:16px;margin-bottom:24px;border:1px solid #333;box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.gallery-photo{margin:0;position:relative;min-height:300px;border-radius:18px;overflow:hidden;background:#111;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.gallery-photo img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block;transition:transform .25s ease}
+.gallery-photo:hover img{transform:scale(1.025)}
+.gallery-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:42px 18px 16px;color:white;font-weight:900;background:linear-gradient(transparent,rgba(0,0,0,.88))}
+.gallery-photo.wide{grid-column:span 2}
+.shop-photo-box{padding:0;overflow:hidden}
+.shop-photo-box>img{width:100%;height:250px;object-fit:cover;display:block}
+.shop-info{padding:26px 30px 30px}
+@media(max-width:560px){.gallery-photo.wide{grid-column:span 1}.hero-logo{width:100%}}
