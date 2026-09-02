@@ -470,3 +470,47 @@ section{
     text-align:center;
   }
 }
+/* REAL GOOGLE REVIEW CARDS */
+
+.customer-review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:1000px;
+  margin:38px auto 0;
+}
+
+.customer-review-card{
+  background:#fff;
+  color:#181818;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  text-align:left;
+}
+
+.review-stars{
+  color:#f4b400;
+  font-size:1.35rem;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+
+.review-text{
+  font-size:1.05rem;
+  line-height:1.6;
+  margin:0 0 18px;
+  font-weight:600;
+}
+
+.review-source{
+  color:#666;
+  font-size:.85rem;
+  font-weight:700;
+}
+
+@media(max-width:800px){
+  .customer-review-grid{
+    grid-template-columns:1fr;
+  }
+}
