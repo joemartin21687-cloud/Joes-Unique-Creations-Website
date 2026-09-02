@@ -589,9 +589,11 @@ section{
 .hero-logo{
     display:block;
     width:100%;
-    max-width:520px;
+    max-width:430px;
     height:auto;
     object-fit:contain;
+    margin-bottom:28px;
+}
 }
 
 @media(max-width:700px){
