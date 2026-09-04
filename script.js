@@ -69,16 +69,76 @@ artworkFile?.addEventListener('change', () => {
 
 removeFileBtn?.addEventListener('click', clearArtworkFile);
 
-quoteForm?.addEventListener('submit', (event) => {
-  const file = artworkFile?.files?.[0];
+quoteForm?.addEventListener('submit', async (event) => {
+    const file = artworkFile?.files?.[0];
 
-  if (file && file.size > MAX_FILE_SIZE) {
-    event.preventDefault();
-    if (fileStatus) {
-      fileStatus.textContent =
-        'Please remove the oversized file or choose one under 10 MB before submitting.';
-      fileStatus.classList.add('error');
-      fileStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Keep your existing 10 MB protection
+    if (file && file.size > MAX_FILE_SIZE) {
+        event.preventDefault();
+
+        if (fileStatus) {
+            fileStatus.textContent =
+                'Please remove the oversized file or choose one under 10 MB before submitting.';
+
+            fileStatus.classList.add('error');
+
+            fileStatus.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        return;
     }
-  }
+
+    // Stop FormSubmit for a moment while we send a copy to the manager
+    event.preventDefault();
+
+    if (quoteSubmitBtn) {
+        quoteSubmitBtn.disabled = true;
+        quoteSubmitBtn.textContent = 'Sending Quote...';
+    }
+
+    try {
+        const formData = new FormData(quoteForm);
+        const quoteData = {};
+
+        // Copy all form fields except the artwork file
+        for (const [key, value] of formData.entries()) {
+            if (value instanceof File) {
+                continue;
+            }
+
+            if (quoteData[key]) {
+                quoteData[key] =
+                    Array.isArray(quoteData[key])
+                        ? [...quoteData[key], value]
+                        : [quoteData[key], value];
+            } else {
+                quoteData[key] = value;
+            }
+        }
+
+        await fetch(
+            'https://joes-unique-creations-manager.onrender.com/api/website-quote',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(quoteData)
+            }
+        );
+
+    } catch (error) {
+        console.error('Manager quote copy failed:', error);
+
+        // IMPORTANT:
+        // We still continue to FormSubmit so you do not lose the customer's email.
+    }
+
+    // Send the original form normally to FormSubmit.
+    // This includes the artwork attachment and keeps your thank-you redirect.
+    quoteForm.submit();
 });
+  
