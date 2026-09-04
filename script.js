@@ -69,24 +69,83 @@ artworkFile?.addEventListener('change', () => {
 
 removeFileBtn?.addEventListener('click', clearArtworkFile);
 
-quoteForm?.addEventListener('submit', async (event) => {
+quoteForm?.addEventListener('submit', (event) => {
     const file = artworkFile?.files?.[0];
 
-    // Keep your existing 10 MB protection
+    // Keep the 10 MB file limit
     if (file && file.size > MAX_FILE_SIZE) {
         event.preventDefault();
 
         if (fileStatus) {
             fileStatus.textContent =
                 'Please remove the oversized file or choose one under 10 MB before submitting.';
-
             fileStatus.classList.add('error');
-
             fileStatus.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
         }
+
+        return;
+    }
+
+    // Create an invisible iframe for the manager copy
+    let iframe = document.getElementById('managerQuoteFrame');
+
+    if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'managerQuoteFrame';
+        iframe.name = 'managerQuoteFrame';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+    }
+
+    // Create a second hidden form that sends the quote to the manager
+    const managerForm = document.createElement('form');
+
+    managerForm.method = 'POST';
+    managerForm.action =
+        'https://joes-unique-creations-manager.onrender.com/api/website-quote';
+
+    managerForm.target = 'managerQuoteFrame';
+    managerForm.style.display = 'none';
+
+    const originalData = new FormData(quoteForm);
+
+    for (const [name, value] of originalData.entries()) {
+
+        // Artwork stays with the normal email submission for now
+        if (value instanceof File) {
+            continue;
+        }
+
+        // Don't copy FormSubmit's private control fields
+        if (name.startsWith('_')) {
+            continue;
+        }
+
+        const input = document.createElement('input');
+
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+
+        managerForm.appendChild(input);
+    }
+
+    document.body.appendChild(managerForm);
+
+    // Send copy to Manager
+    managerForm.submit();
+
+    // Remove temporary form shortly afterward
+    setTimeout(() => {
+        managerForm.remove();
+    }, 3000);
+
+    // DO NOT preventDefault here.
+    // The original form continues normally to FormSubmit.
+});
 
         return;
     }
