@@ -119,16 +119,27 @@ quoteForm?.addEventListener('submit', async (event) => {
             }
         }
 
-        await fetch(
-            'https://joes-unique-creations-manager.onrender.com/api/website-quote',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(quoteData)
-            }
-        );
+    const managerResponse = await fetch(
+    'https://joes-unique-creations-manager.onrender.com/api/website-quote',
+    {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(quoteData)
+    }
+);
+
+const managerText = await managerResponse.text();
+
+console.log('Manager status:', managerResponse.status);
+console.log('Manager response:', managerText);
+
+if (!managerResponse.ok) {
+    throw new Error(
+        `Manager returned ${managerResponse.status}: ${managerText}`
+    );
+}
 
     } catch (error) {
         console.error('Manager quote copy failed:', error);
