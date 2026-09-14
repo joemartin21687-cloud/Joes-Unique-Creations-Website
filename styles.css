@@ -351,257 +351,30 @@ section{
 }
 
 
-/* V5 Dropbox large-file upload option */
-.large-upload-box{margin:0 0 22px;padding:20px;border:2px solid var(--red);border-radius:14px;background:#fff7f7;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
-.large-upload-box strong{font-size:1.08rem;color:#111}
-.large-upload-box p{margin:3px 0 0;color:#555}
-.large-upload-box small{color:#555;font-weight:700}
-.large-upload-btn{background:var(--black);color:#fff;border:2px solid var(--red);font-size:1rem}
-.large-upload-btn:hover{background:var(--red)}
-/* GOOGLE REVIEWS SECTION */
-
-.reviews-section{
-  padding:80px 0;
-  background:#111;
+/* 360-degree product showcase */
+.spin-section{
+  background:linear-gradient(145deg,#080808 0%,#181818 60%,#0a0a0a 100%);
   color:#fff;
+  position:relative;
+  overflow:hidden;
 }
-
-.reviews-heading{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 38px;
+.spin-section:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 85% 10%,rgba(215,25,32,.22),transparent 30%);
 }
-
-.reviews-heading .eyebrow{
-  color:var(--red);
-  font-weight:900;
-  letter-spacing:2px;
-  font-size:.8rem;
-}
-
-.reviews-heading h2{
-  font-size:clamp(2rem,4vw,3.3rem);
-  line-height:1.05;
-  margin:10px 0 24px;
-}
-
-.google-rating{
-  background:#fff;
-  color:#181818;
-  padding:22px;
-  border-radius:16px;
-  max-width:520px;
-  margin:0 auto;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
-
-.google-stars{
-  color:#f4b400;
-  font-size:2rem;
-  letter-spacing:5px;
-  margin-bottom:5px;
-}
-
-.google-rating strong{
-  display:block;
-  font-size:1.15rem;
-}
-
-.google-rating p{
-  margin:4px 0 0;
-  color:#555;
-}
-
-.review-cta-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-  max-width:900px;
-  margin:35px auto 0;
-}
-
-.review-cta-card{
-  background:#1c1c1c;
-  border:1px solid rgba(255,255,255,.1);
-  padding:32px;
-  border-radius:16px;
-}
-
-.review-cta-card h3{
-  margin-top:0;
-  font-size:1.45rem;
-}
-
-.review-cta-card p{
-  color:#ccc;
-  margin-bottom:24px;
-}
-
-.review-btn{
-  display:inline-block;
-}
-
-.review-trust{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:24px;
-  margin-top:35px;
-  font-size:.9rem;
-  color:#ddd;
-}
-
-@media(max-width:700px){
-  .reviews-section{
-    padding:55px 0;
-  }
-
-  .review-cta-grid{
-    grid-template-columns:1fr;
-  }
-
-  .review-cta-card{
-    padding:24px;
-  }
-
-  .review-trust{
-    flex-direction:column;
-    gap:8px;
-    text-align:center;
-  }
-}
-/* REAL GOOGLE REVIEW CARDS */
-
-.customer-review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  max-width:1000px;
-  margin:38px auto 0;
-}
-
-.customer-review-card{
-  background:#fff;
-  color:#181818;
-  padding:28px;
-  border-radius:16px;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-  text-align:left;
-}
-
-.review-stars{
-  color:#f4b400;
-  font-size:1.35rem;
-  letter-spacing:3px;
-  margin-bottom:15px;
-}
-
-.review-text{
-  font-size:1.05rem;
-  line-height:1.6;
-  margin:0 0 18px;
-  font-weight:600;
-}
-
-.review-source{
-  color:#666;
-  font-size:.85rem;
-  font-weight:700;
-}
-
-@media(max-width:800px){
-  .customer-review-grid{
-    grid-template-columns:1fr;
-  }
-}
-/* Floating Call Now Button */
-.floating-call-btn{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    z-index:9999;
-
-    background:#e51b23;
-    color:#fff;
-    text-decoration:none;
-
-    font-size:17px;
-    font-weight:800;
-
-    padding:15px 22px;
-    border-radius:50px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
-
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-    transition:transform .2s ease, background .2s ease;
-}
-
-.floating-call-btn:hover{
-    background:#c9141b;
-    color:#fff;
-    transform:translateY(-3px);
-}
-
-/* Mobile */
-@media(max-width:700px){
-    .floating-call-btn{
-        right:15px;
-        bottom:15px;
-        font-size:16px;
-        padding:14px 19px;
-    }
-}
-/* NEW JOE'S UNIQUE CREATIONS HEADER LOGO */
-
-.new-site-logo {
-    display: block;
-    width: 240px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-@media (max-width: 700px) {
-    .new-site-logo {
-        width: 185px;
-    }
-}
-/* NEW LOGO SIZING */
-
-.new-site-logo{
-    display:block;
-    width:220px;
-    max-width:100%;
-    height:auto;
-    object-fit:contain;
-}
-
-.hero-logo{
-    display:block;
-    width:100%;
-    max-width:430px;
-    height:auto;
-    object-fit:contain;
-    margin-bottom:28px;
-}
-}
-
-@media(max-width:700px){
-    .new-site-logo{
-        width:175px;
-    }
-
-    .hero-logo{
-        max-width:100%;
-    }
-}
+.spin-section .wrap{position:relative;z-index:1}
+.spin-heading p:not(.eyebrow){color:#cfcfcf;max-width:760px}
+.spin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.spin-card{background:#fff;color:#161616;border-radius:20px;overflow:hidden;box-shadow:0 20px 55px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.14)}
+.video-shell{position:relative;background:#050505;aspect-ratio:16/10;overflow:hidden}
+.video-shell video{width:100%;height:100%;display:block;object-fit:contain;background:#080808}
+.spin-badge{position:absolute;top:14px;left:14px;background:var(--red);color:#fff;padding:7px 11px;border-radius:999px;font-size:.78rem;font-weight:900;letter-spacing:.08em;pointer-events:none;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.spin-copy{padding:20px 21px 22px}
+.spin-copy h3{margin:0 0 6px;font-size:1.25rem}
+.spin-copy p{margin:0;color:#626262}
+.spin-cta{margin-top:28px;padding:22px 24px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.spin-cta div{display:flex;flex-direction:column}
+.spin-cta strong{font-size:1.15rem}
+.spin-cta span{color:#d0d0d0}
+@media(max-width:850px){.spin-grid{grid-template-columns:1fr}.spin-cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.video-shell{aspect-ratio:4/3}.spin-copy{padding:17px}.spin-cta{padding:18px}}
