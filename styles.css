@@ -483,3 +483,17 @@ section{
   max-width: 100%;
   height: auto;
 }
+
+/* Force hero logo to stay inside the page */
+.hero-logo {
+  display: block !important;
+  width: 100% !important;
+  max-width: 430px !important;
+  height: auto !important;
+  max-height: 165px !important;
+  object-fit: contain !important;
+}
+
+img {
+  max-width: 100%;
+}
