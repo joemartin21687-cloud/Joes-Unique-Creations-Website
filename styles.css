@@ -378,3 +378,100 @@ section{
 .spin-cta span{color:#d0d0d0}
 @media(max-width:850px){.spin-grid{grid-template-columns:1fr}.spin-cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.video-shell{aspect-ratio:4/3}.spin-copy{padding:17px}.spin-cta{padding:18px}}
+
+/* =========================================
+   360 PRODUCT SHOWCASE
+   Joe's Unique Creations
+   ========================================= */
+
+.spin-showcase {
+  padding: 70px 20px;
+  background:
+    radial-gradient(circle at top, rgba(220, 38, 38, 0.18), transparent 45%),
+    linear-gradient(180deg, #111111 0%, #050505 100%);
+  text-align: center;
+}
+
+.spin-showcase h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spin-showcase h2 span {
+  color: #dc2626;
+}
+
+.spin-showcase .section-subtitle {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  color: #d1d5db;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.spin-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.spin-card {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.spin-card:hover {
+  transform: translateY(-6px);
+  border-color: #dc2626;
+  box-shadow: 0 20px 50px rgba(220, 38, 38, 0.22);
+}
+
+.spin-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #000000;
+}
+
+.spin-card h3 {
+  margin: 16px 8px 6px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.spin-card p {
+  margin: 0 8px 14px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+  .spin-showcase {
+    padding: 50px 15px;
+  }
+
+  .spin-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .spin-card {
+    border-radius: 16px;
+  }
+}
