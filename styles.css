@@ -497,3 +497,11 @@ section{
 img {
   max-width: 100%;
 }
+
+/* TEST - restore normal site content width */
+.wrap {
+  width: 92% !important;
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
