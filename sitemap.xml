@@ -91,8 +91,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- NEW LOCAL SEO PAGES -->
-
   <url>
     <loc>https://joesuniquecreationspa.com/custom-t-shirts-horsham-pa.html</loc>
     <changefreq>monthly</changefreq>
@@ -119,6 +117,38 @@
 
   <url>
     <loc>https://joesuniquecreationspa.com/custom-t-shirts-blue-bell-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- NEWEST LOCAL SERVICE PAGES -->
+
+  <url>
+    <loc>https://joesuniquecreationspa.com/custom-t-shirts-plymouth-meeting-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://joesuniquecreationspa.com/custom-t-shirts-lafayette-hill-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://joesuniquecreationspa.com/custom-t-shirts-conshohocken-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://joesuniquecreationspa.com/custom-t-shirts-north-wales-pa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://joesuniquecreationspa.com/custom-t-shirts-warminster-pa.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
