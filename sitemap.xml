@@ -212,4 +212,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-</urlset>
+  <url>\n    <loc>https://joesuniquecreationspa.com/reviews.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>
