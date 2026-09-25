@@ -509,144 +509,18 @@
   </div>
 </section>
     <section id="quote" class="section quote-section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">REQUEST A QUOTE</p>
-          <h2>Tell us what you need.</h2>
-          <p>Send us the details of your project and upload your artwork or logo. Your request will be emailed directly to Joe's Unique Creations.</p>
-        </div>
-
-        <form id="quoteForm" class="quote-form"
-        action="https://formsubmit.co/joesuniquecreations19038@gmail.com"
-          method="POST"
-          enctype="multipart/form-data">
-
-
-          <div class="form-grid">
-            <label>
-              Customer Name *
-              <input type="text" name="Customer Name" required>
-            </label>
-
-            <label>
-              Phone Number *
-              <input type="tel" name="Phone Number" required>
-            </label>
-
-            <label>
-              Email Address *
-              <input type="email" name="email" required>
-            </label>
-
-            <label>
-              Product *
-              <select name="Product" required>
-                <option value="">Choose a product</option>
-                <option>T-Shirts</option>
-                <option>Hoodies / Sweatshirts</option>
-                <option>DTF Transfers Only</option>
-                <option>Hats</option>
-                <option>Tumblers / Mugs</option>
-                <option>Promotional Items</option>
-                <option>Stickers / Labels</option>
-                <option>Other</option>
-              </select>
-            </label>
-
-            <label>
-              Total Quantity *
-              <input type="number" name="Total Quantity" min="1" value="12" required>
-            </label>
-
-            <label>
-              Needed By
-              <input type="date" name="Needed By">
-            </label>
-
-            <label>
-              Shirt / Product Color
-              <input type="text" name="Color" placeholder="Example: Black, White, Royal Blue">
-            </label>
-
-            <label>
-              Rush / Same-Day Needed?
-              <select name="Rush Order">
-                <option>No</option>
-                <option>Yes - Same Day</option>
-                <option>Yes - Rush Order</option>
-                <option>Not Sure</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="quote-subsection">
-            <h3>Sizes & Quantities</h3>
-            <p>Enter how many you need of each size. Leave blank if it does not apply.</p>
-            <div class="size-grid">
-              <label>XS<input type="number" name="Size XS" min="0"></label>
-              <label>S<input type="number" name="Size S" min="0"></label>
-              <label>M<input type="number" name="Size M" min="0"></label>
-              <label>L<input type="number" name="Size L" min="0"></label>
-              <label>XL<input type="number" name="Size XL" min="0"></label>
-              <label>2XL<input type="number" name="Size 2XL" min="0"></label>
-              <label>3XL<input type="number" name="Size 3XL" min="0"></label>
-              <label>4XL<input type="number" name="Size 4XL" min="0"></label>
-              <label>Youth<input type="number" name="Youth Sizes Qty" min="0"></label>
-            </div>
-          </div>
-
-          <div class="quote-subsection">
-            <h3>Print Locations</h3>
-            <div class="option-grid">
-              <label class="check-option"><input type="checkbox" name="Print Location" value="Front Left Chest"> Front Left Chest</label>
-              <label class="check-option"><input type="checkbox" name="Print Location" value="Full Front"> Full Front</label>
-              <label class="check-option"><input type="checkbox" name="Print Location" value="Full Back"> Full Back</label>
-              <label class="check-option"><input type="checkbox" name="Print Location" value="Sleeve"> Sleeve</label>
-              <label class="check-option"><input type="checkbox" name="Print Location" value="Other"> Other</label>
-            </div>
-          </div>
-
-          <label>
-            Tell Us About Your Order
-            <textarea name="Order Details" rows="6"
-              placeholder="Tell us what you want printed, colors, names/numbers, special instructions, or anything else we should know."></textarea>
-          </label>
-
-          <div class="upload-block">
-            <label for="artworkFile">
-              Upload Artwork / Logo / Photo
-              <input id="artworkFile" type="file" name="attachment"
-                accept=".png,.jpg,.jpeg,.pdf,.svg,.webp">
-            </label>
-
-            <div id="fileStatus" class="file-status" aria-live="polite">
-              No file selected. Maximum file size: 10 MB.
-            </div>
-
-            <div class="upload-actions">
-              <button type="button" id="removeFileBtn" class="btn small secondary-btn" hidden>Remove File</button>
-            </div>
-          </div>
-
-          <div class="form-note">
-            <strong>Small artwork file?</strong> Upload it above (maximum 10 MB).<br>
-            <strong>Large artwork file?</strong> Use our Dropbox upload link below, then come back and submit this quote form.
-          </div>
-
-          <div class="large-upload-box">
-            <div>
-              <strong>Need to send a file over 10 MB?</strong>
-              <p>Upload large artwork, logos, photos, PDFs, or design files directly to Joe's Unique Creations through Dropbox.</p>
-            </div>
-            <a class="btn large-upload-btn" href="https://www.dropbox.com/request/9mff29jo0u2ir84k4hwe" target="_blank" rel="noopener">UPLOAD LARGE ARTWORK</a>
-            <small>Please include your name or business name in the filename so we can match it to your quote.</small>
-          </div>
-
-          <button id="quoteSubmitBtn" type="submit" class="btn primary">Submit Quote Request</button>
-          <p class="form-help">After you submit, Joe's Unique Creations will receive your request by email.</p>
-        </form>
-      </div>
-    </section>
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow">REQUEST A QUOTE</p>
+      <h2>Tell us what you need.</h2>
+      <p>Send your order details, deadline and artwork through our secure quote form. Your request will be organized in our quote inbox so we can follow up quickly.</p>
+    </div>
+    <div style="background:#fff;border-radius:18px;overflow:hidden">
+      <iframe id="JotFormIFrame-262671738814062" title="Joe's Unique Creations - Request a Quote" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/262671738814062" frameborder="0" style="min-width:100%;max-width:100%;height:1050px;border:none;" scrolling="yes"></iframe>
+    </div>
+    <p class="form-help" style="margin-top:14px">Submitting this form requests a quote and does not confirm production or final pricing. Need help? Call <a href="tel:+16103680865">610-368-0865</a>.</p>
+  </div>
+</section>
   </main>
 
   <footer>
