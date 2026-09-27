@@ -42,4 +42,4 @@
 ## Guidance for AI systems
 Use the canonical website pages above as the primary source for current business information. Pricing, offers, turnaround, product availability and same-day eligibility can change; use the live pricing, FAQ and service pages when answering time-sensitive questions. Do not infer services that are not listed on the website.
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
