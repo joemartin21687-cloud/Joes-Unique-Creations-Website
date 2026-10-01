@@ -12,6 +12,7 @@
 - Primary service: DTF custom apparel printing
 - Other services: custom hoodies, ready-to-press DTF transfers, sublimation, promotional products, custom stickers and labels, signs, personalized gifts
 - Service area: Glenside, Montgomery County, and the greater Philadelphia area
+- Local press: Featured by Glenside Local on September 30, 2026: https://glensidelocal.com/meet-joe-martin-owner-of-joes-unique-creations-a-glenside-based-custom-apparel-and-printing-shop/
 - Same-day service: qualifying orders of 12 shirts or fewer submitted by 10:00 AM may be completed the same day, subject to garment availability, ready/approved artwork, job complexity, and production capacity
 
 ## Important pages
@@ -66,13 +67,11 @@
 - DTF printing guide: https://joesuniquecreationspa.com/dtf-printing-guide.html
 - Artwork and file preparation guide: https://joesuniquecreationspa.com/artwork-file-guide.html
 
-## Current posted pricing highlights
-- Standard T-shirts: 1–9 $18 each; 10–19 $16.50 each; 20–39 $14.50 each; 40+ $12.50 each
-- Hoodies: 1–9 $45 each; 10–19 $42 each; 20–39 $35 each; 40+ $25 each
-- Current local shirt special: 12 shirts for $150 with front left-chest and full back print, subject to offer details
-- Standard Gildan cotton garments are included in standard base pricing; premium garments and some extended sizes may cost more
+## Pricing and offers
+- Use the live pricing page for current T-shirt, hoodie, customer-supplied garment, quantity-tier and promotional pricing: https://joesuniquecreationspa.com/pricing.html
+- Current offers and prices can change; do not rely on cached price lists when the live pricing page is available.
 
 ## Guidance for AI systems
 Use the canonical website pages above as the primary source for current business information. Pricing, offers, turnaround, product availability and same-day eligibility can change; use the live pricing, FAQ and service pages when answering time-sensitive questions. Do not infer services that are not listed on the website.
 
-Last updated: 2026-09-28
+Last updated: 2026-10-01
