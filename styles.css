@@ -552,3 +552,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ef
   html{scroll-behavior:auto}
   .spin-card,.gallery-photo img{transition:none}
 }
+
+/* Shared service layouts used by the Philadelphia landing pages. */
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px}
+.service-card{padding:24px;border:1px solid #e5e5e5;border-radius:16px;background:#fff}
+.service-card h3{margin:0 0 8px}
+.service-card p{margin:0;color:#555}
+.hero-copy{font-size:1.12rem;color:#ddd;max-width:780px;margin:24px 0}
+.hero .btn:not(.primary):not(.secondary){background:#fff;color:#111}
+.section.alt{background:#f5f5f5}
+@media(max-width:650px){.service-grid{grid-template-columns:1fr}}
