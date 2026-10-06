@@ -1,6 +1,6 @@
 /* Activate with the measurement ID from Joe's own GA4 web data stream. */
 (() => {
-  const measurementId = '';
+  const measurementId = 'G-MT00JVC99W';
   if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
 
   window.dataLayer = window.dataLayer || [];
