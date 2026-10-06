@@ -562,3 +562,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ef
 .hero .btn:not(.primary):not(.secondary){background:#fff;color:#111}
 .section.alt{background:#f5f5f5}
 @media(max-width:650px){.service-grid{grid-template-columns:1fr}}
+
+/* Compact holiday welcome keeps apparel within easy reach. */
+#christmas .holiday-featured{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+#christmas .holiday-featured a{padding:16px;background:#fff;border:1px solid #c5a24c;border-radius:10px;text-decoration:none;color:#18362b}
+#christmas .holiday-featured strong{display:block;color:#9b1a2b}
+#christmas .holiday-note a{text-decoration:underline;font-weight:700}
+body:has(#home) #christmas{padding:30px 0}
+body:has(#home) #christmas .holiday-hero{padding:28px;gap:28px}
+body:has(#home) #christmas .holiday-hero h2{font-size:clamp(2rem,4vw,3.3rem)}
+body:has(#home) #christmas .holiday-examples{max-height:300px;object-fit:contain}
+.holiday-grid a{display:inline-block;margin-top:12px}
+@media(max-width:560px){#christmas .holiday-featured{grid-template-columns:1fr}body:has(#home) #christmas .holiday-hero{padding:22px 18px}.new-site-logo{max-width:180px!important}.nav{gap:16px}}
