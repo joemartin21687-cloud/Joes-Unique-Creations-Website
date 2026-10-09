@@ -127,6 +127,21 @@
 @media(max-width:950px){#christmas .holiday-hero{grid-template-columns:1fr}#christmas .holiday-ornaments,#christmas .holiday-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){#christmas{padding:40px 0}#christmas .holiday-hero{padding:24px 18px;gap:24px}#christmas .holiday-grid,#christmas .holiday-ornaments{grid-template-columns:1fr}#christmas .holiday-order{padding:24px 18px}}
 </style>
+
+<style id="how-to-order-styles">
+#how-to-order{padding:54px 0;background:#f7f7f7}
+#how-to-order .how-order-heading{text-align:center;max-width:780px;margin:0 auto 28px}
+#how-to-order .how-order-heading h2{margin:8px 0 10px}
+#how-to-order .how-order-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#how-to-order .how-order-card{background:#fff;border:1px solid #dedede;border-top:4px solid #e31b23;border-radius:14px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+#how-to-order .how-order-card .step{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e31b23;color:#fff;font-weight:900;margin-bottom:12px}
+#how-to-order .how-order-card h3{margin:0 0 8px;font-size:1.08rem}
+#how-to-order .how-order-card p{margin:0;line-height:1.6}
+#how-to-order .how-order-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:24px 0 0}
+#how-to-order .how-order-note{text-align:center;font-size:.92rem;line-height:1.55;max-width:800px;margin:18px auto 0}
+@media(max-width:900px){#how-to-order .how-order-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#how-to-order{padding:40px 0}#how-to-order .how-order-grid{grid-template-columns:1fr}#how-to-order .how-order-card{padding:18px}}
+</style>
   <script defer src="analytics.js?v=20261005"></script>
 <link rel="stylesheet" href="gallery.css">
 </head>
@@ -207,6 +222,27 @@
           <p>Front left chest + full back print</p>
           <a href="#special" class="text-link">See special details →</a>
         </div>
+      </div>
+    </section>
+
+    <section id="how-to-order" aria-labelledby="how-to-order-title">
+      <div class="wrap">
+        <div class="how-order-heading">
+          <p class="eyebrow">SIMPLE, PERSONAL ORDERING</p>
+          <h2 id="how-to-order-title">How to order</h2>
+          <p>From your first message to pickup or delivery, Joe will guide you through each step.</p>
+        </div>
+        <div class="how-order-grid">
+          <article class="how-order-card"><span class="step" aria-hidden="true">1</span><h3>Tell us what you need</h3><p>Send the item, quantity, sizes, artwork and your needed-by date through the order form, or call Joe to talk it through.</p></article>
+          <article class="how-order-card"><span class="step" aria-hidden="true">2</span><h3>Confirm the details</h3><p>Joe will check availability and timing, then confirm the details and final price with you.</p></article>
+          <article class="how-order-card"><span class="step" aria-hidden="true">3</span><h3>Approve and pay</h3><p>Once you approve the total, Joe sends a secure Stripe invoice payment link. The order form does not collect payment.</p></article>
+          <article class="how-order-card"><span class="step" aria-hidden="true">4</span><h3>Production and pickup</h3><p>Joe makes your order and arranges pickup or delivery with you.</p></article>
+        </div>
+        <div class="how-order-actions">
+          <a href="https://form.jotform.com/262671738814062" class="btn primary">Start Your Order</a>
+          <a href="tel:+16103680865" class="btn secondary">Call 610-368-0865</a>
+        </div>
+        <p class="how-order-note"><strong>Need it fast?</strong> Orders of up to 12 shirts submitted by 10 AM may qualify for same-day service, subject to garment availability and ready, approved artwork. Some orders or circumstances may make same-day completion unavailable; confirm timing with Joe.</p>
       </div>
     </section>
 
