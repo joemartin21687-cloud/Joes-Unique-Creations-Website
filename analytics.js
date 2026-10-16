@@ -36,6 +36,7 @@
     try { url = new URL(link.href, location.href); } catch { return; }
     let action;
     if (url.protocol === 'tel:') action = 'click_to_call';
+    else if (url.hostname === 'form.jotform.com' && url.pathname === '/262881102440045') action = 'price_inquiry_start';
     else if (url.protocol === 'mailto:') action = 'email_click';
     else if (url.hostname === 'form.jotform.com' && url.pathname === '/262671738814062') {
       action = 'order_start';
