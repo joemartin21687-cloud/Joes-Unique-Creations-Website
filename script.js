@@ -35,15 +35,18 @@ document.addEventListener('click', event => {
 window.matchMedia('(max-width: 1250px)').addEventListener('change', closeMenu);
 
 
-// A direct text option on service pages as well as the homepage.
-if (!document.querySelector('a[href^="sms:"]')) {
-  const textLink = document.createElement('a');
-  textLink.href = 'sms:+16103680865';
-  textLink.className = 'floating-call-btn';
-  textLink.dataset.contactPlacement = 'floating';
-  textLink.textContent = 'Text Joe for a Quote';
-  textLink.setAttribute('aria-label', "Text Joe's Unique Creations for a quote");
-  const callLink = document.querySelector('.floating-call-btn');
-  if (callLink) callLink.replaceWith(textLink);
-  else document.body.appendChild(textLink);
+// Keep call and text together on every page, including small screens.
+document.querySelector('.floating-call-btn')?.remove();
+if (!document.querySelector('.contact-quick-actions')) {
+  const actions = document.createElement('nav');
+  actions.className = 'contact-quick-actions';
+  actions.setAttribute('aria-label', 'Contact Joe');
+  for (const [protocol, label] of [['tel', 'Call Joe'], ['sms', 'Text Joe']]) {
+    const link = document.createElement('a');
+    link.href = protocol + ':+16103680865';
+    link.textContent = label;
+    link.dataset.contactPlacement = 'mobile_contact_bar';
+    actions.appendChild(link);
+  }
+  document.body.appendChild(actions);
 }
