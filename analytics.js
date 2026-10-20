@@ -35,7 +35,8 @@
     let url;
     try { url = new URL(link.href, location.href); } catch { return; }
     let action;
-    if (url.protocol === 'tel:') action = 'click_to_call';
+    if (url.protocol === 'sms:') action = 'click_to_text';
+    else if (url.protocol === 'tel:') action = 'click_to_call';
     else if (url.hostname === 'form.jotform.com' && url.pathname === '/262881102440045') action = 'price_inquiry_start';
     else if (url.protocol === 'mailto:') action = 'email_click';
     else if (url.hostname === 'form.jotform.com' && url.pathname === '/262671738814062') {
@@ -45,6 +46,7 @@
     if (action) gtag('event', action, {
       page_path: location.pathname,
       event_category: 'contact',
+      contact_placement: link.dataset.contactPlacement || (link.closest('header') ? 'navigation' : link.closest('footer') ? 'footer' : link.classList.contains('floating-call-btn') ? 'floating' : 'page'),
       transport_type: 'beacon'
     });
   });
