@@ -50,3 +50,19 @@ if (!document.querySelector('.contact-quick-actions')) {
   }
   document.body.appendChild(actions);
 }
+
+(function(){
+  if(document.querySelector('.same-day-sitewide-banner'))return;
+  const banner=document.createElement('aside');
+  banner.className='same-day-sitewide-banner';
+  banner.setAttribute('aria-label','Same-day custom T-shirt printing');
+  banner.innerHTML='<div class="same-day-banner-inner"><span class="same-day-banner-kicker">⚡ NEED SHIRTS TODAY?</span><strong>SAME-DAY CUSTOM T-SHIRT PRINTING</strong><span class="same-day-banner-terms">Up to 12 shirts • Order by 10 AM • Subject to garment availability and approved, ready artwork</span><a class="same-day-banner-cta" href="https://form.jotform.com/262671738814062">ORDER NOW →</a></div>';
+  const header=document.querySelector('.site-header')||document.querySelector('header');
+  if(header)header.insertAdjacentElement('afterend',banner);else document.body.prepend(banner);
+  const footer=document.querySelector('footer');
+  if(footer&&!document.querySelector('.same-day-footer-link')){
+    const note=document.createElement('p');note.className='same-day-footer-link';
+    note.innerHTML='⚡ <strong>Same-day custom T-shirt printing in Glenside, PA</strong> — Up to 12 shirts ordered by 10 AM may qualify. <a href="/rush-printing.html">Details</a> · <a href="https://form.jotform.com/262671738814062">Order now</a>';
+    footer.prepend(note);
+  }
+})();
