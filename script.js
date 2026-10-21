@@ -62,7 +62,7 @@ if (!document.querySelector('.contact-quick-actions')) {
   const footer=document.querySelector('footer');
   if(footer&&!document.querySelector('.same-day-footer-link')){
     const note=document.createElement('p');note.className='same-day-footer-link';
-    note.innerHTML='⚡ <strong>Same-day custom T-shirt printing in Glenside, PA</strong> — Up to 12 shirts ordered by 10 AM may qualify. <a href="/rush-printing.html">Details</a> · <a href="https://form.jotform.com/262671738814062">Order now</a>';
+    note.innerHTML='⚡ <strong>Same-day custom T-shirt printing in Glenside, PA</strong> — Up to 12 shirts ordered by 10 AM may qualify. <a href="/rush-same-day-custom-t-shirts-glenside-pa.html">Details</a> · <a href="https://form.jotform.com/262671738814062">Order now</a>';
     footer.prepend(note);
   }
 })();
