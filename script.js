@@ -66,3 +66,15 @@ if (!document.querySelector('.contact-quick-actions')) {
     footer.prepend(note);
   }
 })();
+
+// Keep the primary same-day service discoverable from every page.
+(function(){
+  const nav=document.querySelector('.nav-links');
+  if(!nav || nav.querySelector('.sitewide-seo-nav-link')) return;
+  const a=document.createElement('a');
+  a.href='/rush-same-day-custom-t-shirts-glenside-pa.html';
+  a.className='sitewide-seo-nav-link';
+  a.textContent='Same-Day Shirts';
+  const first=nav.querySelector('a');
+  if(first)first.insertAdjacentElement('beforebegin',a);else nav.appendChild(a);
+})();
