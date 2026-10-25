@@ -594,3 +594,10 @@ body:has(#home) #christmas .holiday-examples{max-height:300px;object-fit:contain
 @keyframes sameDayGlow{0%,100%{opacity:1;text-shadow:0 0 0 transparent}50%{opacity:.82;text-shadow:0 0 13px #ffdb61}}
 @media(prefers-reduced-motion:reduce){.same-day-sitewide-banner strong{animation:none}.same-day-banner-cta{transition:none}}
 @media(max-width:650px){.same-day-banner-inner{flex-direction:column;gap:8px}.same-day-banner-terms{font-size:.82rem}.same-day-banner-cta{width:100%;max-width:360px}}
+
+/* Consistent pricing and eligibility across service and gift pages. */
+.consistent-offers{box-sizing:border-box;margin:16px auto;padding:18px 20px;background:#171717;color:#fff;border:2px solid #e31b23;border-radius:12px;text-align:center}
+.consistent-offers strong{font-size:clamp(1.05rem,2.6vw,1.55rem);line-height:1.4}
+.consistent-offers p{margin:8px auto;color:#eee;max-width:960px;font-size:.92rem;line-height:1.55}
+.consistent-offers a{color:#fff;text-decoration:underline;font-weight:700}
+.consistent-offers a:focus-visible{outline:3px solid #fff;outline-offset:3px}
