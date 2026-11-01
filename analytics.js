@@ -49,13 +49,16 @@
     let action;
     if (url.protocol === 'sms:') action = 'click_to_text';
     else if (url.protocol === 'tel:') action = 'click_to_call';
-    else if (url.hostname === 'form.jotform.com' && url.pathname === '/262881102440045') action = 'price_inquiry_start';
+    else if (url.hostname === 'form.jotform.com' && url.pathname === '/262881102440045') {
+      action = 'price_inquiry_start';
+      try { sessionStorage.setItem('joe_lead_started', JSON.stringify({ source: 'price_inquiry', at: Date.now() })); } catch {}
+    }
     else if (url.protocol === 'mailto:') action = 'email_click';
     else if (url.hostname === 'g.page' && url.pathname.endsWith('/review')) action = 'review_click';
     else if (url.origin === location.origin && /\/(custom-christmas-gifts|holiday-gift-pricing|personalized-christmas-ornaments|personalized-photo-christmas-gifts|business-teacher-christmas-gifts)\.html$/.test(url.pathname)) action = 'gift_browse';
     else if (url.hostname === 'form.jotform.com' && url.pathname === '/262671738814062') {
       action = 'order_start';
-      try { sessionStorage.setItem('joe_order_started', String(Date.now())); } catch {}
+      try { sessionStorage.setItem('joe_lead_started', JSON.stringify({ source: 'order_request', at: Date.now() })); } catch {}
     }
     if (action) gtag('event', action, {
       page_path: location.pathname,
@@ -65,13 +68,16 @@
     });
   });
 
-  // Count a confirmation only after this browser started an order.
-  // The form redirects here after a successful submission.
+  // A form-start click is an intent signal; only the submission redirect counts as a lead.
   if (location.pathname === '/thank-you.html') {
     try {
-      const started = Number(sessionStorage.getItem('joe_order_started'));
-      if (started && Date.now() - started < 86400000) {
-        gtag('event', 'generate_lead', { lead_source: 'order_request', page_path: '/thank-you.html' });
+      const pending = JSON.parse(sessionStorage.getItem('joe_lead_started') || 'null');
+      const oldStarted = Number(sessionStorage.getItem('joe_order_started'));
+      const started = pending?.at || oldStarted;
+      const source = pending?.source || 'order_request';
+      if (started && Date.now() >= started && Date.now() - started < 86400000) {
+        gtag('event', 'generate_lead', { lead_source: source, page_path: '/thank-you.html' });
+        sessionStorage.removeItem('joe_lead_started');
         sessionStorage.removeItem('joe_order_started');
       }
     } catch {}

@@ -22,8 +22,10 @@ Official website for Joe's Unique Creations, a custom apparel and printing busin
 - Dropbox option for artwork files over 10 MB
 - Google review call-to-action
 
-## Quote form
-Quote submissions are sent to joesuniquecreations19038@gmail.com using FormSubmit. Files up to 10 MB can be attached directly. Larger artwork can be submitted using the site's Dropbox upload link.
+## Order form and analytics
+Buy Now buttons open https://form.jotform.com/262671738814062. The form collects order details without payment; Joe confirms the total and sends a secure Stripe payment link. After submission, the form redirects to /thank-you.html.
+
+analytics.js records order starts, call/text clicks, and a generate_lead event on the confirmation page when the same browser previously opened the order form. GA4 account-side key-event settings and live reporting must be verified separately. A form-start click is not a completed order or payment.
 
 ## SEO notes
 The current official/canonical domain is **joesuniquecreationspa.com**. The former joesuc.com domain is no longer the canonical website and should not be used in new metadata, sitemap entries, internal links, or documentation.
