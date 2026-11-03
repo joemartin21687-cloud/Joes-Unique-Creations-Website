@@ -41,12 +41,18 @@ if (!document.querySelector('.contact-quick-actions')) {
   const actions = document.createElement('nav');
   actions.className = 'contact-quick-actions';
   actions.setAttribute('aria-label', 'Contact Joe');
-  for (const [protocol, label] of [['tel', 'Call Joe'], ['sms', 'Text Joe']]) {
+  for (const [protocol, label] of [['tel', 'Call Joe'], ['sms', 'Text Joe'], ['order', 'Buy Now']]) {
     const link = document.createElement('a');
-    link.href = protocol + ':+16103680865';
+    link.href = protocol === 'order' ? 'https://form.jotform.com/262671738814062' : protocol + ':+16103680865';
     link.textContent = label;
     link.dataset.contactPlacement = 'mobile_contact_bar';
     actions.appendChild(link);
   }
   document.body.appendChild(actions);
 }
+
+// Mark the current page without changing link labels.
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const url = new URL(link.href, location.href);
+  if (url.origin === location.origin && url.pathname === location.pathname) link.setAttribute('aria-current', 'page');
+});
