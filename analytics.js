@@ -1,4 +1,4 @@
-/* Activate with the measurement ID from Joe's own GA4 web data stream. */
+/* Joe's GA4 stream. Contact clicks are intent; submission redirects are leads. */
 (() => {
   const measurementId = 'G-MT00JVC99W';
   if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
@@ -60,9 +60,13 @@
       action = 'order_start';
       try { sessionStorage.setItem('joe_lead_started', JSON.stringify({ source: 'order_request', at: Date.now() })); } catch {}
     }
+    const selectedPackage = url.searchParams.get('packageChoice') || '';
+    const orderPackage = selectedPackage.startsWith('12 T-Shirts for $200') ? '12_shirts_200'
+      : selectedPackage.startsWith('12 Gildan Hoodies for $450') ? '12_hoodies_450' : 'custom_order';
     if (action) gtag('event', action, {
       page_path: location.pathname,
       event_category: 'contact',
+      ...(action === 'order_start' ? { order_package: orderPackage } : {}),
       contact_placement: link.dataset.contactPlacement || (link.closest('header') ? 'navigation' : link.closest('footer') ? 'footer' : link.classList.contains('floating-call-btn') ? 'floating' : 'page'),
       transport_type: 'beacon'
     });
