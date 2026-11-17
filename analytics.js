@@ -63,6 +63,7 @@
     if (action) gtag('event', action, {
       page_path: location.pathname,
       event_category: 'contact',
+      offer_name: link.dataset.offer || 'general',
       contact_placement: link.dataset.contactPlacement || (link.closest('header') ? 'navigation' : link.closest('footer') ? 'footer' : link.classList.contains('floating-call-btn') ? 'floating' : 'page'),
       transport_type: 'beacon'
     });
