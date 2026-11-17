@@ -29,3 +29,6 @@ analytics.js records order starts, call/text clicks, and a generate_lead event o
 
 ## SEO notes
 The current official/canonical domain is **joesuniquecreationspa.com**. The former joesuc.com domain is no longer the canonical website and should not be used in new metadata, sitemap entries, internal links, or documentation.
+
+## Contact-focused website refresh
+Generic Get My Price links use the short inquiry form https://form.jotform.com/262881102440045. Package-specific requests retain the detailed form and prefill the selected package. Call/text actions remain available on every page. Neither form collects payment. Analytics tracks price_inquiry_start, order_start, click_to_call and click_to_text; generate_lead requires the submission redirect, and is not a paid order.

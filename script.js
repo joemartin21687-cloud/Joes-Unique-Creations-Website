@@ -41,9 +41,9 @@ if (!document.querySelector('.contact-quick-actions')) {
   const actions = document.createElement('nav');
   actions.className = 'contact-quick-actions';
   actions.setAttribute('aria-label', 'Contact Joe');
-  for (const [protocol, label] of [['tel', 'Call Joe'], ['sms', 'Text Joe'], ['order', 'Buy Now']]) {
+  for (const [protocol, label] of [['tel', 'Call Joe'], ['sms', 'Text Joe'], ['order', 'Get My Price']]) {
     const link = document.createElement('a');
-    link.href = protocol === 'order' ? 'https://form.jotform.com/262671738814062' : protocol + ':+16103680865';
+    link.href = protocol === 'order' ? 'https://form.jotform.com/262881102440045' : protocol + ':+16103680865';
     link.textContent = label;
     link.dataset.contactPlacement = 'mobile_contact_bar';
     actions.appendChild(link);
